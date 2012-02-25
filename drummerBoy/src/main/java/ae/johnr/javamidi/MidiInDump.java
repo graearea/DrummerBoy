@@ -39,6 +39,8 @@ package ae.johnr.javamidi;
 |<---            this code is formatted to fit into 80 columns             --->|
 */
 
+import gnu.getopt.Getopt;
+
 import java.io.IOException;
 
 import javax.sound.midi.Transmitter;
@@ -54,76 +56,74 @@ import javax.sound.midi.Synthesizer;
 //import gnu.getopt.Getopt;
 
 
-
-/**	<titleabbrev>MidiInDump</titleabbrev>
- <title>Listens to a MIDI port and dump the received event to the console</title>
-
- <formalpara><title>Purpose</title>
- <para>Listens to a MIDI port and dump the received event to the console.</para></formalpara>
-
- <formalpara><title>Usage</title>
- <para>
- <cmdsynopsis>
- <command>java MidiInDump</command>
- <arg choice="plain"><option>-l</option></arg>
- </cmdsynopsis>
- <cmdsynopsis>
- <command>java MidiInDump</command>
- <arg choice="plain"><option>-d <replaceable>devicename</replaceable></option></arg>
- <arg choice="plain"><option>-n <replaceable>device#</replaceable></option></arg>
- </cmdsynopsis>
- </para></formalpara>
-
- <formalpara><title>Parameters</title>
- <variablelist>
- <varlistentry>
- <term><option>-l</option></term>
- <listitem><para>list the availabe MIDI devices</para></listitem>
- </varlistentry>
- <varlistentry>
- <term><option>-d <replaceable>devicename</replaceable></option></term>
- <listitem><para>reads from named device (see <option>-l</option>)</para></listitem>
- </varlistentry>
- <varlistentry>
- <term><option>-n <replaceable>device#</replaceable></option></term>
- <listitem><para>reads from device with given index (see <option>-l</option>)</para></listitem>
- </varlistentry>
- </variablelist>
- </formalpara>
-
- <formalpara><title>Bugs, limitations</title>
- <para>
- For the Sun J2SDK 1.3.x or 1.4.0, MIDI IN does not work. See the <olink targetdoc="faq_midi" targetptr="faq_midi">FAQ</olink> for alternatives.
- </para></formalpara>
-
- <formalpara><title>Source code</title>
- <para>
- <ulink url="MidiInDump.java.html">MidiInDump.java</ulink>,
- <ulink url="DumpReceiver.java.html">DumpReceiver.java</ulink>,
- <ulink url="MidiCommon.java.html">MidiCommon.java</ulink>,
- <ulink url="http://www.urbanophile.com/arenn/hacking/download.html">gnu.getopt.Getopt</ulink>
- </para>
- </formalpara>
-
+/**
+ * <titleabbrev>MidiInDump</titleabbrev>
+ * <title>Listens to a MIDI port and dump the received event to the console</title>
+ * <p/>
+ * <formalpara><title>Purpose</title>
+ * <para>Listens to a MIDI port and dump the received event to the console.</para></formalpara>
+ * <p/>
+ * <formalpara><title>Usage</title>
+ * <para>
+ * <cmdsynopsis>
+ * <command>java MidiInDump</command>
+ * <arg choice="plain"><option>-l</option></arg>
+ * </cmdsynopsis>
+ * <cmdsynopsis>
+ * <command>java MidiInDump</command>
+ * <arg choice="plain"><option>-d <replaceable>devicename</replaceable></option></arg>
+ * <arg choice="plain"><option>-n <replaceable>device#</replaceable></option></arg>
+ * </cmdsynopsis>
+ * </para></formalpara>
+ * <p/>
+ * <formalpara><title>Parameters</title>
+ * <variablelist>
+ * <varlistentry>
+ * <term><option>-l</option></term>
+ * <listitem><para>list the availabe MIDI devices</para></listitem>
+ * </varlistentry>
+ * <varlistentry>
+ * <term><option>-d <replaceable>devicename</replaceable></option></term>
+ * <listitem><para>reads from named device (see <option>-l</option>)</para></listitem>
+ * </varlistentry>
+ * <varlistentry>
+ * <term><option>-n <replaceable>device#</replaceable></option></term>
+ * <listitem><para>reads from device with given index (see <option>-l</option>)</para></listitem>
+ * </varlistentry>
+ * </variablelist>
+ * </formalpara>
+ * <p/>
+ * <formalpara><title>Bugs, limitations</title>
+ * <para>
+ * For the Sun J2SDK 1.3.x or 1.4.0, MIDI IN does not work. See the <olink targetdoc="faq_midi" targetptr="faq_midi">FAQ</olink> for alternatives.
+ * </para></formalpara>
+ * <p/>
+ * <formalpara><title>Source code</title>
+ * <para>
+ * <ulink url="MidiInDump.java.html">MidiInDump.java</ulink>,
+ * <ulink url="DumpReceiver.java.html">DumpReceiver.java</ulink>,
+ * <ulink url="MidiCommon.java.html">MidiCommon.java</ulink>,
+ * <ulink url="http://www.urbanophile.com/arenn/hacking/download.html">gnu.getopt.Getopt</ulink>
+ * </para>
+ * </formalpara>
  */
-public class MidiInDump
-{
-    /**	Flag for debugging messages.
-     If true, some messages are dumped to the console
-     during operation.
+public class MidiInDump {
+    /**
+     * Flag for debugging messages.
+     * If true, some messages are dumped to the console
+     * during operation.
      */
-    private static boolean		DEBUG = true;
+    private static boolean DEBUG = true;
 
 
     public static void main(String[] args)
-            throws Exception
-    {
+            throws Exception {
 
         /*
            *	The device name/index to listen to.
            */
-        String	strDeviceName = null;
-        int	nDeviceIndex = -1;
+        String strDeviceName = null;
+        int nDeviceIndex = -1;
         boolean bUseDefaultSynthesizer = false;
         // TODO: synchronize options with MidiPlayer
 
@@ -131,14 +131,12 @@ public class MidiInDump
         /*
            *	Parsing of command-line options takes place...
            */
-//        Getopt	g = new Getopt("MidiInDump", args, "hlsd:n:D");
-//        int	c;
+        Getopt g = new Getopt("MidiInDump", args, "hlsd:n:D");
+        int c;
 
-//        while ((c = g.getopt()) != -1)
-
+        while ((c = g.getopt()) != -1)
         {
-            switch (c)
-            {
+            switch (c) {
                 case 'h':
                     printUsageAndExit();
 
@@ -151,12 +149,16 @@ public class MidiInDump
 
                 case 'd':
                     strDeviceName = g.getOptarg();
-                    if (DEBUG) { out("MidiInDump.main(): device name: " + strDeviceName); }
+                    if (DEBUG) {
+                        out("MidiInDump.main(): device name: " + strDeviceName);
+                    }
                     break;
 
                 case 'n':
                     nDeviceIndex = Integer.parseInt(g.getOptarg());
-                    if (DEBUG) { out("MidiInDump.main(): device index: " + nDeviceIndex); }
+                    if (DEBUG) {
+                        out("MidiInDump.main(): device index: " + nDeviceIndex);
+                    }
                     break;
 
                 case 'D':
@@ -172,73 +174,54 @@ public class MidiInDump
             }
         }
 
-        if ((strDeviceName == null) && (nDeviceIndex < 0))
-        {
+        if ((strDeviceName == null) && (nDeviceIndex < 0)) {
             out("device name/index not specified!");
             printUsageAndExit();
         }
 
-        MidiDevice.Info	info;
-        if (strDeviceName != null)
-        {
+        MidiDevice.Info info;
+        if (strDeviceName != null) {
             info = MidiCommon.getMidiDeviceInfo(strDeviceName, false);
-        }
-        else
-        {
+        } else {
             info = MidiCommon.getMidiDeviceInfo(nDeviceIndex);
         }
-        if (info == null)
-        {
-            if (strDeviceName != null)
-            {
+        if (info == null) {
+            if (strDeviceName != null) {
                 out("no device info found for name " + strDeviceName);
-            }
-            else
-            {
+            } else {
                 out("no device info found for index " + nDeviceIndex);
             }
             System.exit(1);
         }
-        MidiDevice	inputDevice = null;
-        try
-        {
+        MidiDevice inputDevice = null;
+        try {
             inputDevice = MidiSystem.getMidiDevice(info);
             inputDevice.open();
-        }
-        catch (MidiUnavailableException e)
-        {
+        } catch (MidiUnavailableException e) {
             out(e);
         }
-        if (inputDevice == null)
-        {
+        if (inputDevice == null) {
             out("wasn't able to retrieve MidiDevice");
             System.exit(1);
         }
-        Receiver	r = new DumpReceiver(System.out);
-        try
-        {
-            Transmitter	t = inputDevice.getTransmitter();
+        Receiver r = new DumpReceiver(System.out);
+        try {
+            Transmitter t = inputDevice.getTransmitter();
             t.setReceiver(r);
-        }
-        catch (MidiUnavailableException e)
-        {
+        } catch (MidiUnavailableException e) {
             out("wasn't able to connect the device's Transmitter to the Receiver:");
             out(e);
             inputDevice.close();
             System.exit(1);
         }
-        if (bUseDefaultSynthesizer)
-        {
+        if (bUseDefaultSynthesizer) {
             Synthesizer synth = MidiSystem.getSynthesizer();
             synth.open();
             r = synth.getReceiver();
-            try
-            {
-                Transmitter	t = inputDevice.getTransmitter();
+            try {
+                Transmitter t = inputDevice.getTransmitter();
                 t.setReceiver(r);
-            }
-            catch (MidiUnavailableException e)
-            {
+            } catch (MidiUnavailableException e) {
                 out("wasn't able to connect the device's Transmitter to the default Synthesizer:");
                 out(e);
                 inputDevice.close();
@@ -247,31 +230,25 @@ public class MidiInDump
         }
         out("now running; interupt the program with [ENTER] when finished");
 
-        try
-        {
+        try {
             System.in.read();
-        }
-        catch (IOException ioe)
-        {
+        } catch (IOException ioe) {
         }
         inputDevice.close();
-        out("Received "+((DumpReceiver) r).seCount+" sysex messages with a total of "+((DumpReceiver) r).seByteCount+" bytes");
-        out("Received "+((DumpReceiver) r).smCount+" short messages with a total of "+((DumpReceiver) r).smByteCount+" bytes");
-        out("Received a total of "+(((DumpReceiver) r).smByteCount + ((DumpReceiver) r).seByteCount)+" bytes");
-        try
-        {
+        out("Received " + ((DumpReceiver) r).seCount + " sysex messages with a total of " + ((DumpReceiver) r).seByteCount + " bytes");
+        out("Received " + ((DumpReceiver) r).smCount + " short messages with a total of " + ((DumpReceiver) r).smByteCount + " bytes");
+        out("Received a total of " + (((DumpReceiver) r).smByteCount + ((DumpReceiver) r).seByteCount) + " bytes");
+        try {
             Thread.sleep(1000);
-        }
-        catch (InterruptedException e)
-        {
-            if (DEBUG) { out(e); }
+        } catch (InterruptedException e) {
+            if (DEBUG) {
+                out(e);
+            }
         }
     }
 
 
-
-    private static void printUsageAndExit()
-    {
+    private static void printUsageAndExit() {
         out("MidiInDump: usage:");
         out("  java MidiInDump -h");
         out("    gives help information");
@@ -285,16 +262,12 @@ public class MidiInDump
     }
 
 
-
-    private static void out(String strMessage)
-    {
+    private static void out(String strMessage) {
         System.out.println(strMessage);
     }
 
 
-
-    private static void out(Throwable t)
-    {
+    private static void out(Throwable t) {
         if (DEBUG) {
             t.printStackTrace();
         } else {
@@ -302,7 +275,6 @@ public class MidiInDump
         }
     }
 }
-
 
 
 /*** MidiInDump.java ***/
