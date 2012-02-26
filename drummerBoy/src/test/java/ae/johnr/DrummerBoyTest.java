@@ -12,7 +12,7 @@ public class DrummerBoyTest
 {
     @Test
     public void shouldRun() throws Exception{
-        DrummerBoy drummerBoy = new DrummerBoy();
+        new DrummerBoy();
 
 
     }

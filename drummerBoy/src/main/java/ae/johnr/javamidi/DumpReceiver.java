@@ -166,9 +166,13 @@ public class DumpReceiver
                 strTimeStamp = "timestamp " + lTimeStamp + " us: ";
             }
         }
+         if (notTiming(strMessage))
         m_printStream.println(strTimeStamp + strMessage);
     }
 
+    private boolean notTiming(String strMessage) {
+        return !(strMessage.contains("Timing clock")||strMessage.contains("Active Sensing"));
+    }
 
 
     public String decodeMessage(ShortMessage message)
@@ -245,7 +249,7 @@ public class DumpReceiver
         }
         smCount++;
         smByteCount+=message.getLength();
-        return "["+getHexString(message)+"] "+strMessage;
+        return "["+getHexString(message)+"]["+message.getData1()+"] "+strMessage;
     }
 
 

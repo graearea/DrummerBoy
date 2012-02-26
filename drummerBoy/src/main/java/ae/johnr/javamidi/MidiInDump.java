@@ -134,8 +134,7 @@ public class MidiInDump {
         Getopt g = new Getopt("MidiInDump", args, "hlsd:n:D");
         int c;
 
-        while ((c = g.getopt()) != -1)
-        {
+        while ((c = g.getopt() ) != -1) {
             switch (c) {
                 case 'h':
                     printUsageAndExit();
@@ -222,7 +221,7 @@ public class MidiInDump {
                 Transmitter t = inputDevice.getTransmitter();
                 t.setReceiver(r);
             } catch (MidiUnavailableException e) {
-                out("wasn't able to connect the device's Transmitter to the default Synthesizer:");
+                out("wasn't able  to connect the device's Transmitter to the default Synthesizer:");
                 out(e);
                 inputDevice.close();
                 System.exit(1);
