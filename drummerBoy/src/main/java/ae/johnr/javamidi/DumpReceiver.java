@@ -336,7 +336,7 @@ public class DumpReceiver
             case 0x51:
                 int	nTempo = ((abData[0] & 0xFF) << 16)
                         | ((abData[1] & 0xFF) << 8)
-                        | (abData[2] & 0xFF);           // tempo in microseconds per beat
+                        | (abData[2] & 0xFF);           // tempo in microseconds per head
                 float bpm = convertTempo(nTempo);
                 // truncate it to 2 digits after dot
                 bpm = (float) (Math.round(bpm*100.0f)/100.0f);

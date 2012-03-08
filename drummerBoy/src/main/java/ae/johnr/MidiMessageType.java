@@ -9,7 +9,7 @@ public enum MidiMessageType{
     controlChange(0xb0),
     unknownMessageType(0x00),
     ;
-    private int msgId;
+    public final int msgId;
 
     public static MidiMessageType from(ShortMessage shortMessage)
     {

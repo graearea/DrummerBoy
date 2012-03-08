@@ -12,19 +12,19 @@ public enum PadId {
     HH_pedal(46, 16),
     spare(43, 17);
 
-    public final int beat;
+    public final int head;
     public final int rimshot;
 
 
     private PadId(int beat, int rimshot) {
-        this.beat = beat;
+        this.head = beat;
         this.rimshot = rimshot;
     }
 
 
     public static PadId from(int id) {
         for (PadId beat : PadId.values()) {
-            if (beat.beat==(id)||beat.rimshot==id)
+            if (beat.head ==(id)||beat.rimshot==id)
                 return beat;
         }
         return null;

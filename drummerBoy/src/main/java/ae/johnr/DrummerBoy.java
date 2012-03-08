@@ -1,34 +1,30 @@
 package ae.johnr;
 
-import ae.johnr.javamidi.DumpReceiver;
-
-import javax.sound.midi.*;
+import javax.sound.midi.MidiDevice;
+import javax.sound.midi.MidiUnavailableException;
+import javax.sound.midi.Transmitter;
 import java.io.IOException;
 
 /**
  * Hello world!
- *
  */
-public class DrummerBoy 
-{
-    public void main(String[] args){new DrummerBoy();}
-    public DrummerBoy() {
-        MidiDeviceHandler  midiDeviceHandler = new MidiDeviceHandler();
-        MidiDevice inputDevice = midiDeviceHandler.getDevice();
-        DrumReceiver r = new DrumReceiver(new BeatFactory());
-        r.addListener(new BeatListener(){
-            public void strike(DrumBeat beat) {
+public class DrummerBoy {
 
-                System.out.println(beat);
-            }
-        });
+    public void main(String[] args) {
+        MidiDeviceHandler midiDeviceHandler = new MidiDeviceHandler();
+        new DrummerBoy(midiDeviceHandler, DrumReceiver.defaultReceiver(), new SysOutDrumListener());
+    }
+
+    public DrummerBoy(MidiDeviceHandler midiDeviceHandler, DrumReceiver drumReceiver, SysOutDrumListener listener) {
+        MidiDevice inputDevice = midiDeviceHandler.getDevice();
+        drumReceiver.addListener(listener);
 
         try {
             Transmitter t = inputDevice.getTransmitter();
-            t.setReceiver(r);
+            t.setReceiver(drumReceiver);
         } catch (MidiUnavailableException e) {
-            out("wasn't able to connect the device's Transmitter to the Receiver:");
-            out(e);
+            System.out.println("wasn't able to connect the device's Transmitter to the Receiver:");
+            e.printStackTrace();
             inputDevice.close();
             System.exit(1);
         }
@@ -38,20 +34,6 @@ public class DrummerBoy
         } catch (IOException ioe) {
         }
         inputDevice.close();
-//        out("Received " + ((DumpReceiver) r).seCount + " sysex messages with a total of " + ((DumpReceiver) r).seByteCount + " bytes");
-//        out("Received " + ((DumpReceiver) r).smCount + " short messages with a total of " + ((DumpReceiver) r).smByteCount + " bytes");
-//        out("Received a total of " + (((DumpReceiver) r).smByteCount + ((DumpReceiver) r).seByteCount) + " bytes");
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//                out(e);
-//        }
-    }
-    private static void out(Throwable t) {
-            t.printStackTrace();
-    }
 
-    private static void out(String strMessage) {
-        System.out.println(strMessage);
     }
 }

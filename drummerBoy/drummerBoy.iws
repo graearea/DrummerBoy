@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c986af6e-4c9c-4cd3-a8f7-88939db59680" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drummerBoy.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/BeatFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/BeatListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/MidiDeviceHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/PadId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/DumpReceiverTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/MidiInDumpTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiDeviceHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiTransmitter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drummerBoy.iml" afterPath="$PROJECT_DIR$/drummerBoy.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drummerBoy.ipr" afterPath="$PROJECT_DIR$/drummerBoy.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drummerBoy.iws" afterPath="$PROJECT_DIR$/drummerBoy.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/BeatFactory.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/BeatFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/DrummerBoy.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/DrummerBoy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/PadId.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/PadId.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/DumpReceiver.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/DumpReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/MidiInDump.java" afterPath="$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/MidiInDump.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java" afterPath="$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java" />
     </list>
     <ignored path="drummerBoy.iws" />
@@ -91,10 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DumpReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/DumpReceiver.java">
+      <file leaf-file-name="FakeMidiDeviceHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiDeviceHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="16" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,21 +99,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrumReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java">
+      <file leaf-file-name="DrummerBoyTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="5" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="17" column="60" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MidiMessageType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java">
+      <file leaf-file-name="FakeMidiTransmitter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiTransmitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="64" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="6" column="13" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysOutDrumListener.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/SysOutDrumListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="39" selection-start="265" selection-end="265" vertical-scroll-proportion="0.45321637">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrumBeat.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,18 +138,16 @@
       <file leaf-file-name="BeatFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/BeatFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="31" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="8" column="57" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrumBeat.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java">
+      <file leaf-file-name="MidiMessageType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="43" selection-start="309" selection-end="309" vertical-scroll-proportion="0.61388886">
+            <state line="11" column="16" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,7 +156,7 @@
       <file leaf-file-name="PadId.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/PadId.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+            <state line="7" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,28 +165,8 @@
       <file leaf-file-name="BeatListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/BeatListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+            <state line="2" column="17" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MidiInDump.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/MidiInDump.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="33" selection-start="6905" selection-end="6905" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DumpReceiverTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/DumpReceiverTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -183,10 +174,8 @@
       <file leaf-file-name="DrummerBoy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrummerBoy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="23" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,21 +194,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/MidiInDumpTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/MidiInDump.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/DumpReceiverTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrumReader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/MidiDeviceHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/DumpReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/ae/johnr/BeatListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/ae/johnr/PadId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/SysOutDrumlistener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/SysOutDrumListener.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/AwesomeFakeDrummer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrummerBoy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/DumpReceiverTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ae/johnr/BeatFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrummerBoy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiTransmitter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiDeviceHandler.java" />
       </list>
     </option>
   </component>
@@ -304,8 +294,8 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
     </navigator>
     <panes>
@@ -441,8 +431,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -471,52 +461,11 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ae.johnr" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ae.johnr" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.MidiInDumpTest.shouldConnect">
-    <configuration default="false" name="MidiInDumpTest.shouldListDevices" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="drummerBoy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ae.johnr.javamidi" />
-      <option name="MAIN_CLASS_NAME" value="ae.johnr.javamidi.MidiInDumpTest" />
-      <option name="METHOD_NAME" value="shouldListDevices" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MidiInDumpTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="drummerBoy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ae.johnr.javamidi" />
-      <option name="MAIN_CLASS_NAME" value="ae.johnr.javamidi.MidiInDumpTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.DrummerBoyTest.shouldPlayWithRandomDrumBeats">
     <configuration default="false" name="MidiInDumpTest.shouldConnect" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="drummerBoy" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -586,6 +535,50 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DumpReceiverTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="drummerBoy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ae.johnr.javamidi" />
+      <option name="MAIN_CLASS_NAME" value="ae.johnr.javamidi.DumpReceiverTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DrummerBoyTest.shouldPlayWithRandomDrumBeats" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="drummerBoy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ae.johnr" />
+      <option name="MAIN_CLASS_NAME" value="ae.johnr.DrummerBoyTest" />
+      <option name="METHOD_NAME" value="shouldPlayWithRandomDrumBeats" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -711,11 +704,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.MidiInDumpTest.shouldListDevices" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MidiInDumpTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MidiInDumpTest.shouldConnect" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DumpReceiverTest.shouldRegisterHardSnareHit" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DrummerBoyTest.shouldRun" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MidiInDumpTest.shouldConnect" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DumpReceiverTest.shouldRegisterHardSnareHit" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DrummerBoyTest.shouldRun" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DumpReceiverTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DrummerBoyTest.shouldPlayWithRandomDrumBeats" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -750,23 +743,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34146342" sideWeight="0.6356209" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3412943" sideWeight="0.65824914" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6683006" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28736517" sideWeight="0.65824914" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33169934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34175083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -820,128 +813,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_29/src.zip!/java/io/PrintStream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/MidiInDump.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="753" column="16" selection-start="24589" selection-end="24589" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="205" column="33" selection-start="6905" selection-end="6905" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_29/src.zip!/javax/sound/midi/MidiMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="16" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_29/src.zip!/javax/sound/midi/ShortMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="0" selection-start="7240" selection-end="7240" vertical-scroll-proportion="64.6">
+        <state line="30" column="0" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/MidiDeviceHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/MidiInDumpTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="4" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+        <state line="46" column="0" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/javamidi/DumpReceiverTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/MidiInDump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="33" selection-start="6905" selection-end="6905" vertical-scroll-proportion="0.0">
+        <state line="24" column="34" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/javamidi/DumpReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="16" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="111" column="11" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="12" selection-start="699" selection-end="699" vertical-scroll-proportion="0.55263156">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/BeatListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+        <state line="2" column="17" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/PadId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+        <state line="7" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/BeatFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="8" column="57" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/MidiMessageType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="64" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+        <state line="11" column="16" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrummerBoy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+        <state line="23" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/DrummerBoyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="60" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiDeviceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumReceiver.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ae/johnr/FakeMidiTransmitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="5" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="6" column="13" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/DrumBeat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ae/johnr/SysOutDrumListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="309" selection-end="309" vertical-scroll-proportion="0.61388886">
+        <state line="10" column="39" selection-start="265" selection-end="265" vertical-scroll-proportion="0.45321637">
           <folding />
         </state>
       </provider>

@@ -4,6 +4,8 @@ package ae.johnr;
 import javax.sound.midi.MidiMessage;
 import javax.sound.midi.Receiver;
 import javax.sound.midi.ShortMessage;
+import javax.xml.datatype.DatatypeFactory;
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +16,12 @@ public class DrumReceiver
     private final BeatFactory beatFactory;
 
     public DrumReceiver(BeatFactory beatFactory) {
-        this.beatFactory =  beatFactory;
+        this.beatFactory = beatFactory;
     }
 
+    public static DrumReceiver defaultReceiver() {
+        return new DrumReceiver(new BeatFactory());
+    }
 
     public void send(MidiMessage message, long timeStamp) {
         if (message instanceof ShortMessage) {
@@ -24,10 +29,10 @@ public class DrumReceiver
         }
     }
 
-    public void addListener(BeatListener listener)
-    {
+    public void addListener(BeatListener listener) {
         beatListeners.add(listener);
     }
+
     private void notifyListeners(DrumBeat beat) {
         for (BeatListener listener : beatListeners) {
             listener.strike(beat);
@@ -39,7 +44,7 @@ public class DrumReceiver
 
     public DrumBeat decodeMessage(ShortMessage message) {
 
-        return beatFactory.createBeat(message,MidiMessageType.from(message));
+        return beatFactory.createBeat(message, MidiMessageType.from(message));
     }
 
 }
