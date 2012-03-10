@@ -30,7 +30,9 @@ public class BarTest {
             assertThat(bar.tick(), is(empty));
         }
     }
-@Test
+
+
+    @Test
     public void ticksShouldReturnBeats() {
         bar = new Bar("xxxx");
         for (int i = 0; i < 4; i++) {
@@ -38,12 +40,17 @@ public class BarTest {
         }
     }
 
-    @Test
-    public void barGivenPatternShouldReturnPattern()
+    @Test(expected = RuntimeException.class)
+    public void invalidNumberOfBeatsShouldThrowException()
     {
-        bar=new Bar("xoxoxoxoxoxoxoxo");
+        bar = new Bar("xoxoxoxoxoxoxox");
+    }
+
+    @Test
+    public void barGivenPatternShouldReturnPattern() {
+        bar = new Bar("xoxoxoxoxoxoxoxo");
         for (int i = 0; i < 16; i++) {
-            assertThat(bar.tick(), is(i%2==0? beat:empty));
+            assertThat(bar.tick(), is(i % 2 == 0 ? beat : empty));
         }
     }
 }

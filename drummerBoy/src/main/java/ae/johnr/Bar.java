@@ -25,6 +25,8 @@ public class Bar {
     }
 
     public Tick tick() {
+        if(position==beats)
+            position=0;
         return Tick.from(pattern.substring(position,++position));
     }
 

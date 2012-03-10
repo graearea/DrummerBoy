@@ -13,11 +13,8 @@ public class DrumKit implements Transmitter {
 
     public DrumKit() {
     }
-//    addDrummerToKit(PadId.HH,    new Bar("xxxxxxxx"));
-//    addDrummerToKit(PadId.kick,  new Bar("xoooxxoo"));
-//    addDrummerToKit(PadId.snare, new Bar("ooxoooxo"));
 
-    private void addDrummerToKit(PadId pad, Bar bar) {
+    public void addDrummerToKit(PadId pad, Bar bar) {
         kit.put(pad, bar);
     }
 
