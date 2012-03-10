@@ -9,12 +9,10 @@ import java.util.List;
 
 public class FakeMidiDeviceHandler extends MidiDeviceHandler {
 
-    private FakeMidiTransmitter fakeMidiTransmitter;
-
     @Override
     public MidiDevice getDevice() {
 
-        return new FakeMidiDevice(new FakeMidiTransmitter());
+        return new FakeMidiDevice(new DrumKit());
     }
 
 
