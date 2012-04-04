@@ -37,7 +37,7 @@ public class Bar {
         public static Tick from(String notation) {
             if ("x".equals(notation))
                 return beat;
-            if ("o".equals(notation))
+            if ("-".equals(notation))
                 return empty;
             return unidentified;
         }

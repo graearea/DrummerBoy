@@ -1,4 +1,4 @@
-package ae.johnr.drummer.javamidi;
+package ae.johnr.javamidi;
 /*
  *	DumpReceiver.java
  *

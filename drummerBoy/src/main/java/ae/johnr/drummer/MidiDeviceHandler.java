@@ -1,13 +1,12 @@
 package ae.johnr.drummer;
 
 
-import ae.johnr.drummer.javamidi.MidiCommon;
+import ae.johnr.javamidi.MidiCommon;
 
 import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 
-import static ae.johnr.drummer.javamidi.MidiCommon.getMidiDeviceInfo;
 
 public class MidiDeviceHandler {
     String strDeviceName = null;

@@ -1,5 +1,8 @@
 package ae.johnr.drummer;
 
+import ae.johnr.drummer.DrumKit;
+import ae.johnr.drummer.MidiDeviceHandler;
+
 import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Receiver;

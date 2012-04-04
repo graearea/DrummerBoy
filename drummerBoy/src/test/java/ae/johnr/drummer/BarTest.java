@@ -1,5 +1,6 @@
 package ae.johnr.drummer;
 
+import ae.johnr.drummer.Bar;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class BarTest {
 
     @Before
     public void setUp() {
-        bar = new Bar("oooo");
+        bar = new Bar("----");
     }
 
     @Test
@@ -42,12 +43,12 @@ public class BarTest {
 
     @Test(expected = RuntimeException.class)
     public void invalidNumberOfBeatsShouldThrowException() {
-        bar = new Bar("xoxoxoxoxoxoxox");
+        bar = new Bar("x-x-x-x-x-x-x-x");
     }
 
     @Test
     public void barGivenPatternShouldReturnPattern() {
-        bar = new Bar("xoxoxoxoxoxoxoxo");
+        bar = new Bar("x-x-x-x-x-x-x-x-");
         for (int i = 0; i < 16; i++) {
             assertThat(bar.tick(), is(i % 2 == 0 ? beat : empty));
         }

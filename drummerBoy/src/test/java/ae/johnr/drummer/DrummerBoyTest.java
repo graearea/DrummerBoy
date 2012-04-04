@@ -1,5 +1,6 @@
 package ae.johnr.drummer;
 
+import ae.johnr.drummer.*;
 import org.junit.Test;
 
 /**

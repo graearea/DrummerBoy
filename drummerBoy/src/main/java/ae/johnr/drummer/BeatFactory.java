@@ -2,13 +2,11 @@ package ae.johnr.drummer;
 
 import javax.sound.midi.ShortMessage;
 
-import static ae.johnr.drummer.MidiMessageType.controlChange;
-
 
 public class BeatFactory {
 
     public DrumBeat createBeat(ShortMessage message, MidiMessageType type) {
-        if (type== controlChange)
+        if (type== MidiMessageType.controlChange)
         {
             return new DrumBeat(PadId.HH_pedal,message.getData2());
         }

@@ -26,7 +26,7 @@ public class DrumServer extends HttpServlet {
         ServletHandler servletHandler = new ServletHandler();
         servletHandler.addServletWithMapping(DrumServer.class, "/drum/*");
         ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setBaseResource(newClassPathResource("ae/johnr.drummer"));
+        resourceHandler.setBaseResource(newClassPathResource("ae/johnr.ae.johnr"));
 
         DefaultHandler defaultHandler = new DefaultHandler();
 
