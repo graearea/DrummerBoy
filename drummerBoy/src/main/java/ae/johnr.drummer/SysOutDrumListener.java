@@ -1,4 +1,4 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 /**
  * Created by IntelliJ IDEA.

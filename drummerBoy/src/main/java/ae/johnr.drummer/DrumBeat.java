@@ -1,4 +1,4 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 public class DrumBeat{
     public final PadId padId;

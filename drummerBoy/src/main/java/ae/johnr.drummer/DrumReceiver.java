@@ -1,11 +1,9 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 
 import javax.sound.midi.MidiMessage;
 import javax.sound.midi.Receiver;
 import javax.sound.midi.ShortMessage;
-import javax.xml.datatype.DatatypeFactory;
-import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.List;
 

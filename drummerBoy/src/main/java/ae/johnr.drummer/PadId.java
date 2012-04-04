@@ -1,4 +1,4 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 public enum PadId {
     snare(40, 34),

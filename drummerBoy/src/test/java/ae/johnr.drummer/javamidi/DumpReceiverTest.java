@@ -1,4 +1,4 @@
-package ae.johnr.javamidi;
+package ae.johnr.drummer.javamidi;
 
 
 import org.junit.Before;
@@ -20,7 +20,6 @@ public class DumpReceiverTest {
     @Before
     public void setup()
     {
-       // Mock
         printStream = Mockito.mock(PrintStream.class);
         dumpReceiver = new DumpReceiver(printStream);
         msg = new ShortMessage();
@@ -31,7 +30,7 @@ public class DumpReceiverTest {
     public void shouldRegisterHardSnareHit() throws InvalidMidiDataException {
         msg.setMessage(ShortMessage.NOTE_ON,9,40,127);
         dumpReceiver.send(msg,10);
-        verify(printStream).println("timestamp 10 us: [99 28 7F] channel 10: note On E2 velocity: 127");
+        verify(printStream).println("timestamp 10 us: [99 28 7F][40] channel 10: note On E2 velocity: 127");
     }
 
 }

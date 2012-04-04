@@ -1,4 +1,4 @@
-package ae.johnr.javamidi;
+package ae.johnr.drummer.javamidi;
 /*
  *	DumpReceiver.java
  *
@@ -36,11 +36,6 @@ package ae.johnr.javamidi;
 
 import	java.io.PrintStream;
 
-import	javax.sound.midi.MidiSystem;
-import	javax.sound.midi.InvalidMidiDataException;
-import	javax.sound.midi.Sequence;
-import	javax.sound.midi.Track;
-import	javax.sound.midi.MidiEvent;
 import	javax.sound.midi.MidiMessage;
 import	javax.sound.midi.ShortMessage;
 import	javax.sound.midi.MetaMessage;

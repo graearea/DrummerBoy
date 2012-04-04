@@ -1,8 +1,9 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 import javax.sound.midi.ShortMessage;
 
-import static ae.johnr.MidiMessageType.controlChange;
+import static ae.johnr.drummer.MidiMessageType.controlChange;
+
 
 public class BeatFactory {
 

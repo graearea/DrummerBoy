@@ -1,4 +1,4 @@
-package ae.johnr.javamidi;
+package ae.johnr.drummer.javamidi;
 
 /*
  *	MidiInDump.java

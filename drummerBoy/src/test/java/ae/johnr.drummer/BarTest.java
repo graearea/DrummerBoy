@@ -1,10 +1,10 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static ae.johnr.Bar.Tick.beat;
-import static ae.johnr.Bar.Tick.empty;
+import static ae.johnr.drummer.Bar.Tick.beat;
+import static ae.johnr.drummer.Bar.Tick.empty;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -41,8 +41,7 @@ public class BarTest {
     }
 
     @Test(expected = RuntimeException.class)
-    public void invalidNumberOfBeatsShouldThrowException()
-    {
+    public void invalidNumberOfBeatsShouldThrowException() {
         bar = new Bar("xoxoxoxoxoxoxox");
     }
 

@@ -50,6 +50,5 @@
             <artifactId>jetty-servlet</artifactId>
             <version>8.1.1.v20120215</version>
         </dependency>
-
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -26,7 +26,7 @@ public class DrumServer extends HttpServlet {
         ServletHandler servletHandler = new ServletHandler();
         servletHandler.addServletWithMapping(DrumServer.class, "/drum/*");
         ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setBaseResource(newClassPathResource("com/example/docroot"));
+        resourceHandler.setBaseResource(newClassPathResource("ae/johnr.drummer"));
 
         DefaultHandler defaultHandler = new DefaultHandler();
 
@@ -51,10 +51,7 @@ public class DrumServer extends HttpServlet {
                 throw new RuntimeException("unknown protocol");
             }
 
-            public boolean checkOrigin(HttpServletRequest httpServletRequest, String s) {
-
-                return true;
-            }
+            public boolean checkOrigin(HttpServletRequest httpServletRequest, String s) {return true;}
         });
         webSocketFactory.setBufferSize(4096);
         webSocketFactory.setMaxIdleTime(600000);
@@ -72,13 +69,17 @@ public class DrumServer extends HttpServlet {
     private class DrumWebSocket implements WebSocket.OnTextMessage {
         private Connection connection;
 
-        public void onMessage(String s) {
+        public void onMessage(String message) {
+            System.out.println("recv:"+message);
+        }
+
+        public void sendMessage(String message) {
             try {
-                connection.sendMessage(s);
+                connection.sendMessage(message);
             } catch (IOException e) {
                 throw new RuntimeException("error sending message", e);
-
             }
+
         }
 
         public void onOpen(Connection connection) {

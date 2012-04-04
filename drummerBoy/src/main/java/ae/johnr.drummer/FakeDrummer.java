@@ -1,7 +1,6 @@
-package ae.johnr;
+package ae.johnr.drummer;
 
 import javax.sound.midi.ShortMessage;
-import javax.sound.midi.Transmitter;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
