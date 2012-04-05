@@ -7,6 +7,11 @@
     <version>1.0-SNAPSHOT</version>
     <name>drummerBoy</name>
     <url>http://maven.apache.org</url>
+
+    <properties>
+        <jetty-version>7.5.0.RC1</jetty-version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -24,7 +29,7 @@
             <artifactId>jetty-server</artifactId>
             <version>8.1.1.v20120215</version>
         </dependency>
-                                            
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -51,4 +56,71 @@
             <version>8.1.1.v20120215</version>
         </dependency>
     </dependencies>
+    <profiles>
+        <profile>
+            <id>server</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <configuration>
+                            <executable>java</executable>
+                            <arguments>
+                                <argument>-showversion</argument>
+                                <argument>-Xmx512m</argument>
+                                <argument>-Xms512m</argument>
+                                <argument>-Xmn256m</argument>
+                                <argument>-XX:+PrintCommandLineFlags</argument>
+                                <argument>-verbose:gc</argument>
+                                <!--<argument>-XX:+PrintGCDetails</argument>-->
+                                <!--<argument>-XX:+PrintGCDateStamps</argument>-->
+                                <argument>-XX:+UseParallelOldGC</argument>
+                                <argument>-XX:-UseAdaptiveSizePolicy</argument>
+                                <!--<argument>-XX:+UseConcMarkSweepGC</argument>-->
+                                <!--<argument>-XX:+UnlockExperimentalVMOptions</argument>-->
+                                <!--<argument>-XX:+UseG1GC</argument>-->
+                                <argument>-cp</argument>
+                                <classpath/>
+                                <argument>ae.johnr.drummer.DrumServer</argument>
+                                <argument>8080</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <!--<profile>
+            <id>client</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <configuration>
+                            <executable>java</executable>
+                            <arguments>
+                                <argument>-showversion</argument>
+                                <argument>-Xmx1024m</argument>
+                                <argument>-Xms1024m</argument>
+                                <argument>-Xmn512m</argument>
+                                <argument>-XX:+PrintCommandLineFlags</argument>
+                                <argument>-verbose:gc</argument>
+                                <argument>-XX:+UseParallelOldGC</argument>
+                                <argument>-XX:-UseAdaptiveSizePolicy</argument>
+                                <argument>-cp</argument>
+                                <classpath/>
+                                <argument>com.example.websocket.ChatLoadClient</argument>
+                                <argument>localhost</argument>
+                                <argument>8080</argument>
+                                <argument>100</argument>
+                                <argument>100000</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>-->
+    </profiles>
+
 </project>

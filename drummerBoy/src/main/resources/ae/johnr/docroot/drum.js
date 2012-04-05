@@ -19,7 +19,7 @@ var drumServer ={
                 .replace('http://', 'ws://')
                 .replace('https://', 'wss://')
                 + "drum";
-		    this._ws = new WebSocket(location, "chat");
+		    this._ws = new WebSocket(location, "drum");
     		this._ws.onOpen = this.onOpen;
     		this._ws.onMessage = this.onMessage;
     		this._ws.onClose = this.onClose;
@@ -63,5 +63,7 @@ var drumServer ={
 
 function init()
 {
-$(connect).onclick = function(event){drumServer.connect()}
+    { drumServer.connect() };
+    //$('joinB').onclick = function(event) { room.join($F('username')); return false; };
+
 }

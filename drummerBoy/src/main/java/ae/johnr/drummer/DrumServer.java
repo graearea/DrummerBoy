@@ -26,12 +26,18 @@ public class DrumServer extends HttpServlet {
         ServletHandler servletHandler = new ServletHandler();
         servletHandler.addServletWithMapping(DrumServer.class, "/drum/*");
         ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setBaseResource(newClassPathResource("ae/johnr.ae.johnr"));
+        resourceHandler.setBaseResource(newClassPathResource("ae/johnr/docroot"));
+
+        ResourceHandler resource_handler = new ResourceHandler();
+        resource_handler.setDirectoriesListed(true);
+        resource_handler.setWelcomeFiles(new String[]{ "index.html" });
+
+        resource_handler.setResourceBase(".");
 
         DefaultHandler defaultHandler = new DefaultHandler();
 
         HandlerList handlers = new HandlerList();
-        handlers.setHandlers(new Handler[]{servletHandler, resourceHandler, defaultHandler});
+        handlers.setHandlers(new Handler[]{servletHandler, resource_handler});
         server.setHandler(handlers);
 
         server.start();

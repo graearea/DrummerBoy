@@ -1,6 +1,5 @@
 package ae.johnr.drummer;
 
-import ae.johnr.drummer.Bar;
 import org.junit.Before;
 import org.junit.Test;
 
